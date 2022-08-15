@@ -40,7 +40,9 @@ export default {
        submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            this.$router.push('/main');
+            sessionStorage.setItem('isLogin','true')
+            /* this.$router.push('/main'); */
+            this.$router.push({name:'Main',params:{name:this.form.name }});
           } else {
             alert('error submit!!');
             return false;

@@ -1,13 +1,13 @@
 <!--  -->
 <template>
   <div>
-    会员列表 ID={{id}}
+    404
   </div>
 </template>
 
 <script>
 export default {
-  props:['id']
+    name:"NotFound"
 
 }
 

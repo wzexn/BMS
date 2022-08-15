@@ -8,15 +8,22 @@
 
 
           <el-menu-item index="1-1">
-            <router-link to="/member/list">会员列表</router-link>
+            <!-- <router-link to="/main/members/list">会员列表</router-link> -->
+            <router-link :to="{name:'MemberList',params:{id:4} }">会员列表</router-link>
             </el-menu-item>
 
 
           <el-menu-item index="1-2">
-          <router-link to="/member/level">会员等级</router-link>
+         <!--  <router-link to="/main/members/level">会员等级</router-link> -->
+          <router-link :to="{name:'MemberLevel',params:{id:3} }">会员等级</router-link> 
+         <!-- 路径传参 -->
           </el-menu-item>
 
-          
+          <el-menu-item index="1-2">
+           <router-link to="/goMain/admin">回到首页</router-link>
+         <!--  -->
+          </el-menu-item>
+
       </el-submenu>
       <el-submenu index="2">
         <template slot="title"><i class="el-icon-menu"></i>商品管理</template>
@@ -38,7 +45,7 @@
           <el-dropdown-item>删除</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
-      <span>admin</span>
+      <span>{{this.$route.params.name}}</span>
     </el-header>
     
     <el-main>
